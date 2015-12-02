@@ -1,0 +1,75 @@
+@prefix cob:  <http://cobusiness.fr/ontologies/barter.owl.n3#>.
+@prefix    :  <http://cobusiness.fr/ontologies/barter.owl.n3#>.
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#>.
+@prefix owl:  <http://www.w3.org/2002/07/owl#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix wn20schema: <http://www.w3.org/2006/03/wn/wn20/schema/>.
+@prefix unspsc: <http://deductions-software.fr/ontologies/unspsc.owl.n3#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#>.
+@prefix schema: <http://schema.org/>.
+@prefix dbo: <http://dbpedia.org/ontology/>.
+
+@prefix form: <http://deductions-software.com/ontologies/forms.owl.ttl#> .
+
+# ==== User ====
+
+:User a owl:Class ;
+  rdfs:label "Utilisateur"@fr ; 
+	rdfs:subClassOf foaf:Person ;
+  dc:description """ 
+Description de l'utilisateur
+""" .
+
+:companyName a owl:DatatypeProperty  ;
+  rdfs:label "nom société"@fr ;
+  rdfs:domain :User .
+
+:shortJob a owl:DatatypeProperty  ;
+  rdfs:label "Activité métier"@fr ;
+  rdfs:domain :User .
+
+:network a owl:DatatypeProperty  ;
+  rdfs:label "écosystème"@fr ;
+  rdfs:comment "Ecosystème peut etre le nom d'un réseau, d'un territoire, d'une association,..." ;
+  rdfs:domain :User .
+
+
+:expertiseSkills a owl:ObjectProperty ;
+  rdfs:label "expertise"@fr ;
+  rdfs:comment "Compétences clefs, expertise"@fr ;
+  dc:description "pourait (devrait en fait) pointer vers un URI dbPedia"@fr ;
+  rdfs:domain :User .
+
+:filterSkills a owl:ObjectProperty ;
+  rdfs:label "filtre"@fr ;
+  rdfs:comment "Filtre sur les CopSkills"@fr ;
+  dc:description "Permet de définir des filtres de recherche de profil par centre d'intérêt"@fr ;
+  rdfs:domain :User .
+
+#=============== propriétés publiques, propriétés obfuscantes
+:hasPublicProperty a owl:ObjectProperty ;
+  rdfs:label "a pour propriété publique"@fr ;
+  rdfs:comment "Permet de définir quelles sont les propriétés publiques de la classe donnée"@fr ;
+  rdfs:range rdf:Property.
+  
+:hasToBeObfuscated a owl:DataTypeProperty ;
+  rdfs:label "doit etre obfusquée en gardant les premiers (xsd:integer) char "@fr ;
+  rdfs:comment "Lie une propriété (non publique) et sa version obfusquée, informe du nombre de char gardé"@fr ;
+  rdfs:range xsd:integer.
+  
+#=============== Liste des propriétés publiques et des propriétés obfusquées
+:User :hasPublicProperty :companyName ; 
+  :hasPublicProperty rdfs:comment ;
+  :hasPublicProperty foaf:firstName ;
+  :hasPublicProperty foaf:lastName ;
+  :hasPublicProperty :hasIllustration ;
+  :hasPublicProperty :expertiseSkills ;
+  :hasPublicProperty rdf:type .
+
+
+
