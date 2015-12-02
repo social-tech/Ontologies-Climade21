@@ -1,0 +1,37 @@
+@prefix unspsc: <http://deductions-software.fr/ontologies/unspsc.owl.n3#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cob:  <http://cobusiness.fr/ontologies/barter.owl.n3#> .
+@prefix cobd: <http://cobusiness.fr/data#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#>.
+@prefix esco: <http://ec.europa.eu/esco/model#>.
+
+cob:CopSkill owl:sameAs esco:Skill.
+cob:CopSkill owl:sameAs cob:Skill.
+
+
+      <http://app.cobusiness.fr/cop/11300> skos:prefLabel """Agriculture""" ; a cob:CopSkill.
+      <http://app.cobusiness.fr/cop/11301> skos:prefLabel """Alimentation""" ; a cob:CopSkill.
+      <http://app.cobusiness.fr/cop/11302> skos:prefLabel """Alternatives""" ; a cob:CopSkill.
+      <http://app.cobusiness.fr/cop/11303> skos:prefLabel """Art & Culture""" ; a cob:CopSkill.
+      <http://app.cobusiness.fr/cop/11304> skos:prefLabel """Biodiversité""" ; a cob:CopSkill.
+      <http://app.cobusiness.fr/cop/11305> skos:prefLabel """Communication""" ; a cob:CopSkill.
+      <http://app.cobusiness.fr/cop/11306> skos:prefLabel """Consommation""" ; a cob:CopSkill.
+      <http://app.cobusiness.fr/cop/11307> skos:prefLabel """Design""" ; a cob:CopSkill.
+      <http://app.cobusiness.fr/cop/11308> skos:prefLabel """Eau""" ; a cob:CopSkill.
+      <http://app.cobusiness.fr/cop/11309> skos:prefLabel """Economie & Finance""" ; a cob:CopSkill.
+      <http://app.cobusiness.fr/cop/11310> skos:prefLabel """Energie""" ; a cob:CopSkill.
+      <http://app.cobusiness.fr/cop/11311> skos:prefLabel """Environnement""" ; a cob:CopSkill.
+      <http://app.cobusiness.fr/cop/11312> skos:prefLabel """Forêt""" ; a cob:CopSkill.
+      <http://app.cobusiness.fr/cop/11313> skos:prefLabel """Habitat""" ; a cob:CopSkill.
+      <http://app.cobusiness.fr/cop/11314> skos:prefLabel """Humanitaire & Solidarité""" ; a cob:CopSkill.
+      <http://app.cobusiness.fr/cop/11315> skos:prefLabel """Innovation""" ; a cob:CopSkill.
+      <http://app.cobusiness.fr/cop/113155> skos:prefLabel """Institutions et négociations internationales"""; a cob:CopSkill.
+      <http://app.cobusiness.fr/cop/11316> skos:prefLabel """Mobilité""" ; a cob:CopSkill.
+      <http://app.cobusiness.fr/cop/11317> skos:prefLabel """Numérique""" ; a cob:CopSkill.
+      <http://app.cobusiness.fr/cop/11318> skos:prefLabel """Outils""" ; a cob:CopSkill.
+      <http://app.cobusiness.fr/cop/11319> skos:prefLabel """Politique publique""" ; a cob:CopSkill.
+      <http://app.cobusiness.fr/cop/11320> skos:prefLabel """Production""" ; a cob:CopSkill.
+      <http://app.cobusiness.fr/cop/11321> skos:prefLabel """Religions et spiritualités""" ; a cob:CopSkill.
+      <http://app.cobusiness.fr/cop/11322> skos:prefLabel """Santé""" ; a cob:CopSkill.
+      <http://app.cobusiness.fr/cop/11323> skos:prefLabel """Sciences & Technologies"""; a cob:CopSkill.
+
